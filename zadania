@@ -32,6 +32,7 @@ p3->p1 444
 p1    444 111222333444
 
 _______________________________________
+
 Zad 2 (3 + 3 pkt)
 Prawo dostępu o kodzie s nadane plikowi oznacza, że:
 
@@ -40,3 +41,32 @@ Prawo dostępu o kodzie s nadane plikowi oznacza, że:
 
 
 Prawo dostępu o kodzie t nadane katalogowi oznacza, że:
+
+Tylko właściciel może go usunąc lub zmienić (dla katalogu)
+Przechowywanie pliku w pamięci (dla plików)
+
+
+_________________________________________
+
+Zadanie 3 (4)
+Poniższy program:
+------------
+touch and_plik1
+rm -f and_plik2
+
+if [ -f and_plik1 ] || echo "-1-"  || [ -f and_plik2 ] && echo "-2-"
+then
+  echo "True"
+  else
+    echo "False"
+fi
+-----------
+wypisuje na ekranie:
+
+
+
+
+
+
+
+_________________________________________
