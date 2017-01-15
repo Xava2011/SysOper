@@ -48,7 +48,7 @@ Przechowywanie pliku w pamięci (dla plików)
 
 _________________________________________
 
-Zadanie 3 (4)
+Zadanie 3 (4pkt)
 Poniższy program:
 ------------
 touch and_plik1
@@ -62,11 +62,62 @@ then
 fi
 -----------
 wypisuje na ekranie:
+True  2
 
 
+p1 ||(p2 ||(p3 && p4))
+  p1 ||(p2&&p4)
 
 
 
 
 
 _________________________________________
+
+touch plik1
+rm -f plik2
+rm -f plik3
+
+if [ -f plik1 ] || echo "-1-"  || [ -f plik2 ] && echo "-2-"  ... plik 3
+then
+  echo "True"
+  else
+    echo "False"
+fi
+
+_________________________________________
+Zad 4 (3 pkt)
+Zakreśl poniżej minimalne uprawnienia pliku, takie żeby plik został znaleziony przez komendę:
+  find / -perm -432
+
+Uprawnienia r w x   r w x   r w x
+
+
+432
+
+ U   G
+100 011 010
+rwx rwx rwx
+
+
+
+_________________________________________
+Zad 5 (3)
+
+Jaki tekst na ekranie wypisze poniższy program:
+-------------
+#include (stdio.h)
+
+int main(){
+
+  int f;
+    printf("A");
+    fork();
+    f=fork();
+    printf("B");
+    if (f==0) printf("\nC");
+    else printf("D\n");
+    }
+
+
+}
